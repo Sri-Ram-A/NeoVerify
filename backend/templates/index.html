@@ -1,0 +1,181 @@
+
+{% extends "base.html" %}
+
+{% block title %}Truth Behind Headlines{% endblock %}
+{%block head%}
+<style>
+/* Slider Styles */
+    .slider-container {
+      margin: 30px auto 0;
+      padding: 15px 0;
+      background: rgba(0, 0, 0, 0);
+      position: relative;
+      z-index: 10;
+      max-width: 80%;
+      border-radius: 8px;
+    }
+
+    .slider {
+      width: 100%;
+      height: var(--height, 100px);
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+    }
+
+    .slider .list {
+      display: flex;
+      width: 100%;
+      min-width: calc(var(--width, 150px) * var(--quantity, 6));
+      position: relative;
+    }
+
+    .slider .list .item {
+      width: var(--width, 150px);
+      height: var(--height, 100px);
+      position: absolute;
+      left: 100%;
+      animation: autoRun 15s linear infinite;
+      animation-delay: calc(
+        (15s / var(--quantity, 6)) * (var(--position) - 1) - 15s
+      ) !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .slider .list .item img {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+      filter: grayscale(0.8);
+      transition: filter 0.3s;
+    }
+
+    @keyframes autoRun {
+      from {
+        left: 100%;
+      }
+      to {
+        left: calc(var(--width, 150px) * -1);
+      }
+    }
+
+    .slider:hover .item {
+      animation-play-state: paused !important;
+    }
+
+    .slider .item:hover img {
+      filter: grayscale(0) brightness(1.1);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .slider {
+        --width: 120px;
+        --height: 80px;
+      }
+     
+      .slider-container {
+        max-width: 95%;
+      }
+    }
+</style>
+{%endblock%}
+{% block content %}
+<div class="hero-container">
+    <div class="background-lines"></div>
+   
+    <!-- Left Gemini Twin -->
+    <div class="gemini gemini-left">
+        <img src="{{ url_for('static', filename='images/gemini.png') }}" alt="Gemini Twins" class="gemini-image">
+    </div>
+
+    <!-- Right Gemini Twin (mirrored) -->
+    <div class="gemini gemini-right">
+        <img src="{{ url_for('static', filename='images/gemini.png') }}" alt="Gemini Twins Mirror" class="gemini-image mirrored">
+    </div>
+
+    <!-- Center Content -->
+    <div class="hero-content">
+        <div class="content-wrapper">
+           
+            <!-- Main Headline -->
+            <h1 class="headline-text">
+                Truth Behind Headlines <br> BY Knights
+            </h1>
+           
+            <!-- Magnifying Glass (hidden by default) -->
+            <div id="magnifier" class="magnifying-glass">
+                <img src="{{ url_for('static', filename='images/magnifyingGlass.png') }}" alt="Magnifying Glass">
+            </div>
+        </div>
+       
+        <p class="subheading">
+            Are you ready to discover the truth? Delve into these advanced reasoning models
+        </p>
+       
+        <!-- Golden Button -->
+        <button id="explore-btn" class="explore-button">Explore Now</button>
+       
+        <!-- Infinite Logo Slider - Now positioned within the hero container -->
+        <div class="slider-container">
+            <div class="slider" style="--width: 150px; --height: 80px; --quantity: 6;">
+                <div class="list">
+                    <div class="item" style="--position: 1">
+                        <img src="static/images/deepseekLogo.png" alt="DeepSeek Logo">
+                    </div>
+                    <div class="item" style="--position: 2">
+                        <img src="static/images/llaamLogo.png" alt="LLaMA Logo">
+                    </div>
+                    <div class="item" style="--position: 3">
+                        <img src="static/images/metaLogo.png" alt="Meta Logo">
+                    </div>
+                    <div class="item" style="--position: 4">
+                        <img src="static/images/deepseekLogo.png" alt="DeepSeek Logo">
+                    </div>
+                    <div class="item" style="--position: 5">
+                        <img src="static/images/llaamLogo.png" alt="LLaMA Logo">
+                    </div>
+                    <div class="item" style="--position: 6">
+                        <img src="static/images/metaLogo.png" alt="Meta Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const exploreBtn = document.getElementById('explore-btn');
+        const magnifier = document.getElementById('magnifier');
+       
+        exploreBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+           
+            // Show magnifying glass
+            magnifier.classList.add('visible');
+           
+            // Position initially near button
+            positionMagnifier(50, 60);
+           
+            // Animation sequence
+            setTimeout(() => positionMagnifier(20, 20), 300);
+            setTimeout(() => positionMagnifier(70, 10), 800);
+            setTimeout(() => positionMagnifier(40, 30), 1300);
+           
+            // Navigate after animation completes
+            setTimeout(() => {
+                window.location.href = "/explore";
+            }, 1800);
+        });
+       
+        function positionMagnifier(x, y) {
+            magnifier.style.left = `${x}%`;
+            magnifier.style.top = `${y}%`;
+        }
+    });
+</script>
+{% endblock %}

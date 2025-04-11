@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block title %}NeoVerify - Upload & Process{% endblock %}
+{% block content %}
+<div class="page-header">
+</div>
+
+<form action="/process" method="post" enctype="multipart/form-data" id="upload-form">
+    <div class="bento-grid">
+        <!-- Image Upload Tile -->
+        <div class="bento-tile" id="image-tile">
+            <div class="tile-header">
+                <i class="fa-solid fa-image tile-icon"></i>
+                <h3 class="tile-title">Image</h3>
+            </div>
+            <div class="upload-area" data-type="image">
+                <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png,.gif,.webp" class="file-input">
+                <div class="upload-content">
+                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                    <p>Drop image here or click to browse</p>
+                    <span class="file-size-limit">Max size: 16MB</span>
+                </div>
+                <div class="file-preview image-preview"></div>
+            </div>
+            <div class="file-info" id="image-info">No file selected</div>
+        </div>
+
+        <!-- Video Upload Tile -->
+        <div class="bento-tile" id="video-tile">
+            <div class="tile-header">
+                <i class="fa-solid fa-film tile-icon"></i>
+                <h3 class="tile-title">Video</h3>
+            </div>
+            <div class="upload-area" data-type="video">
+                <input type="file" id="video" name="video" accept=".mp4,.webm,.mov" class="file-input">
+                <div class="upload-content">
+                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                    <p>Drop video here or click to browse</p>
+                    <span class="file-size-limit">Max size: 16MB</span>
+                </div>
+                <div class="file-preview video-preview"></div>
+            </div>
+            <div class="file-info" id="video-info">No file selected</div>
+        </div>
+
+        <!-- Audio Upload Tile -->
+        <div class="bento-tile" id="audio-tile">
+            <div class="tile-header">
+                <i class="fa-solid fa-music tile-icon"></i>
+                <h3 class="tile-title">Audio</h3>
+            </div>
+            <div class="upload-area" data-type="audio">
+                <input type="file" id="audio" name="audio" accept=".mp3,.wav,.ogg" class="file-input">
+                <div class="upload-content">
+                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                    <p>Drop audio here or click to browse</p>
+                    <span class="file-size-limit">Max size: 16MB</span>
+                </div>
+                <div class="file-preview audio-preview"></div>
+            </div>
+            <div class="file-info" id="audio-info">No file selected</div>
+        </div>
+
+        <!-- Text Upload/Entry Tile -->
+        <div class="bento-tile large-tile" id="text-tile">
+            <div class="tile-header">
+                <i class="fa-solid fa-font tile-icon"></i>
+                <h3 class="tile-title">Text</h3>
+                <div class="toggle-group">
+                    <button type="button" class="toggle-btn active" data-target="text-upload">Upload</button>
+                    <button type="button" class="toggle-btn" data-target="text-entry">Enter Text</button>
+                </div>
+            </div>
+            
+            <!-- Text File Upload Area -->
+            <div class="text-option active" id="text-upload">
+                <div class="upload-area" data-type="text">
+                    <input type="file" id="text" name="text" accept=".txt,.md,.doc,.docx" class="file-input">
+                    <div class="upload-content">
+                        <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                        <p>Drop text file here or click to browse</p>
+                        <span class="file-size-limit">Max size: 16MB</span>
+                    </div>
+                    <div class="file-preview text-preview"></div>
+                </div>
+                <div class="file-info" id="text-info">No file selected</div>
+            </div>
+            
+            <!-- Text Entry Area -->
+            <div class="text-option" id="text-entry">
+                <textarea id="user-text" name="user-text" placeholder="Enter your text here..."></textarea>
+                <div class="text-controls">
+                    <span class="text-count">0 characters</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- URL Entry Tile -->
+        <div class="bento-tile" id="url-tile">
+            <div class="tile-header">
+                <i class="fa-solid fa-link tile-icon"></i>
+                <h3 class="tile-title">URL</h3>
+            </div>
+            <div class="url-input-wrapper">
+                <input type="text" id="url" name="url" placeholder="https://example.com">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="submit-btn">
+            <i class="fa-solid fa-bolt"></i> Process Files
+        </button>
+    </div>
+</form>
+
+{% if results %}
+<div class="results-section">
+    <h2 class="results-title">
+        <i class="fa-solid fa-clipboard-check"></i>
+        Processing Results
+    </h2>
+    <div class="results-content">
+        <pre class="results-code">{{ results | tojson(indent=4) }}</pre>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
+{% block scripts %}
+{% endblock %}

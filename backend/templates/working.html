@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Interface</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        .upload-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        input[type="file"], 
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+        
+        input[type="text"] {
+            font-size: 16px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 0;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .file-info {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        
+        .results {
+            margin-top: 30px;
+            background-color: #f0f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .results h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        .results pre {
+            background-color: white;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: monospace;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>File Upload Interface</h1>
+    
+    <div class="upload-container">
+        <form action="/process" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image" accept=".jpg,.jpeg,.png" onchange="updateFileName(this)">
+                <div class="file-info" id="image-info">No file selected</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="video">Upload Video:</label>
+                <input type="file" id="video" name="video" accept=".mp4" onchange="updateFileName(this)">
+                <div class="file-info" id="video-info">No file selected</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="audio">Upload Audio:</label>
+                <input type="file" id="audio" name="audio" accept=".mp3" onchange="updateFileName(this)">
+                <div class="file-info" id="audio-info">No file selected</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="text">Upload Text File:</label>
+                <input type="file" id="text" name="text" accept=".txt" onchange="updateFileName(this)">
+                <div class="file-info" id="text-info">No file selected</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="url">Enter URL:</label>
+                <input type="text" id="url" name="url" placeholder="https://example.com">
+            </div>
+            
+            <button type="submit">Process</button>
+        </form>
+        
+        {% if results %}
+        <div class="results">
+            <h2>Processing Results</h2>
+            <pre>{{ results | tojson(indent=4) }}</pre>
+        </div>
+        {% endif %}
+    </div>
+    
+    <script>
+        function updateFileName(input) {
+            const fileInfo = document.getElementById(input.id + '-info');
+            if (input.files.length > 0) {
+                fileInfo.textContent = 'Selected: ' + input.files[0].name;
+            } else {
+                fileInfo.textContent = 'No file selected';
+            }
+        }
+    </script>
+</body>
+</html>

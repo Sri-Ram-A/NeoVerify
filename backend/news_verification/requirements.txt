@@ -1,0 +1,16 @@
+dotenv==0.9.9
+google-genai==1.7.0
+groq==0.20.0
+pydantic
+colorama==0.4.6
+google.generativeai == 0.8.4
+openai-whisper
+torch
+numpy
+tqdm
+ffmpeg-python
+more-itertools
+numba
+tldextract == 5.2.0
+newspaper3k
+ lxml_html_clean
