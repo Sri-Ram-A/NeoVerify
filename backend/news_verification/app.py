@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os
 from werkzeug.utils import secure_filename
-
+from op import ClaimFighter
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload
@@ -21,7 +21,7 @@ def explore():
 def process_upload():
     results = {}
     # Handle file uploads
-    file_types = ['image', 'video', 'audio', 'text']
+    file_types = ['image', 'video', 'audio']
     for file_type in file_types:
         if file_type in request.files and request.files[file_type].filename:
             file = request.files[file_type]
@@ -30,17 +30,18 @@ def process_upload():
             file.save(file_path)
             results[file_type] = file_path
         else:
-            results[file_type] = "No file uploaded"
+            results[file_type] = None
     
     # Handle direct text entry (alternative to file upload)
     user_text = request.form.get('user-text', '')
     if user_text:
-        results['text_entry'] = user_text
+        results['text'] = user_text
     else:
-        results['text_entry'] = "No text entered"
+        results['text'] = None
     # Handle URL input
     url = request.form.get('url', '')
-    results['url'] = url if url else "No URL provided"
+    results['url'] = url if url else None
+    print(results)
     fighter = ClaimFighter()
     fighter.run(results)
     return render_template('upload.html', results=results)

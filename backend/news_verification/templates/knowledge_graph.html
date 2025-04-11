@@ -1,0 +1,95 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>NeoVerify-Knowledge Graph</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/graph.css') }}">
+</head>
+
+<body>
+	<!-- Modal Structure -->
+	<div id="infoModal" class="modal">
+		<div class="modal-content">
+			<span class="close-modal">&times;</span>
+			<div class="modal-body">
+				<h3 id="modal-title">Details</h3>
+				<p id="modal-text">Information will appear here</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="tree">
+				<ul>
+					<li> <a href="#"><img src="images/1.jpg"><span><h1>Inputs</h1></span></a>
+						<ul>
+							{%for input in output["inputs"]%}
+							<li> <a href="#"><img src="https://picsum.photos/200"><span class="clickable-span" data-info="*USER INPUT* {{input}} is {{output["inputs"][input]}} and *EXTRACTED INFORMATION* is {{output["descr"][input]}}">{{input}}</span></a>
+							</li>
+							{%endfor%}
+						</ul>
+					</li>
+				</ul>
+				<ul>
+				<li> <a href="#"><img src="https://picsum.photos/200"><span><h1>Claims</h1></span></a>
+					<ul>
+						{%for key,value in output.items() %}
+							{% if key not in ['inputs', 'descr'] %}
+						<li> <a href="#"><img src="https://picsum.photos/200"><span class="clickable-span" data-info="*CLAIM* is {{output[key]['claim']}}">{{key}}</span></a>
+							{%for inner_key,value_of_inner_key in value.items()%}
+								{%if inner_key not in ['claim']%}
+								<ul>
+								<li> <a href="#"><img src="https://picsum.photos/200"><span class="clickable-span" data-info="{{value_of_inner_key}}">{{inner_key}}</span></a>
+								</ul>
+								{%endif%}
+							{%endfor%} 
+						</li>
+						{% endif %}
+						{%endfor%}
+					</ul>	
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Get modal elements
+		const modal = document.getElementById('infoModal');
+		const modalTitle = document.getElementById('modal-title');
+		const modalText = document.getElementById('modal-text');
+		const closeBtn = document.querySelector('.close-modal');
+		
+		// Get all clickable spans
+		const clickableSpans = document.querySelectorAll('.clickable-span');
+		
+		// Add click event to each span
+		clickableSpans.forEach(span => {
+			span.addEventListener('click', function(e) {
+				e.stopPropagation(); // Prevent event bubbling
+				modalTitle.textContent = this.textContent;
+				modalText.textContent = this.getAttribute('data-info');
+				modal.style.display = 'block';
+			});
+		});
+		
+		// Close modal when X is clicked
+		closeBtn.addEventListener('click', function() {
+			modal.style.display = 'none';
+		});
+		
+		// Close modal when clicking outside
+		window.addEventListener('click', function(e) {
+			if (e.target === modal) {
+				modal.style.display = 'none';
+			}
+		});
+	</script>
+</body>
+</html>

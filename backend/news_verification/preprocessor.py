@@ -1,7 +1,8 @@
 class Description:
     def __init__(self):
         self.TAVILY_API = "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"
-        self.GEMINI_API_KEY = "AIzaSyCS_W7p-BJrzYwU1_drQ1fZPVOQR7CAH6E"
+        self.GEMINI_API_KEY ='AIzaSyDG8RTYMMHQKuz0i2PDPmpaCVJBwkeFPZ4'
+        # "AIzaSyCS_W7p-BJrzYwU1_drQ1fZPVOQR7CAH6E"
         #AIzaSyDG8RTYMMHQKuz0i2PDPmpaCVJBwkeFPZ4
         self.API_KEY = "5ee4136c602d451fd46aa04f03948041f84f9d574bc84b1d03cd4cec9312d9c3"
 
@@ -107,9 +108,12 @@ class Description:
         return info
     
     def process(self, input_dict):
+        print(input_dict)
         responses = {}
         for key, value in input_dict.items():
-            if value:
+            
+            if value not in [None, 'null', 'None']:
+                print(f'{key}:{value}')
                 if key == "text":
                     responses[key] = value
 
@@ -134,6 +138,7 @@ class Description:
                     raise ValueError(f"Unsupported input type: {key}")
                     if not responses:
                         raise ValueError("All input values are None.")
+                print(responses)
         return responses 
 
 # if __name__ == "__main__":
