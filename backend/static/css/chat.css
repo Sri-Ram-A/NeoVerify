@@ -1,0 +1,132 @@
+/* Main Card Container */
+h3,h4{
+  color:black
+}
+.card-container {
+  background: linear-gradient(to right, #f9fafb, #e5e7eb);
+  border-radius: 20px;
+  padding: 25px;
+  margin: 40px auto;
+  max-width: 850px;
+  box-shadow: 0 10px 30px rgba(21, 12, 26, 0.1);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #d1d5db;
+  margin-bottom: 20px;
+}
+
+.card-header .img-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+  margin-right: 20px;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.card-header .text-chat {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Chat Body */
+.card-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Messages Container */
+.messages-container {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Each Message Block */
+.message-box {
+  padding: 15px;
+  border-radius: 12px;
+  line-height: 1.5;
+  font-size: 14px;
+  max-width: 85%;
+  word-wrap: break-word;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.message-box.left {
+  background-color: #f3f4f6;
+  color: #111827;
+  align-self: flex-start;
+  border-left: 5px solid #3b82f6;
+}
+
+.message-box.right {
+  background-color: #1f3726;
+  color: #f9fafb;
+  align-self: flex-end;
+  border-right: 5px solid #10b981;
+}
+
+/* Input Area */
+.message-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #d1d5db;
+}
+
+.message-input .message-send {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  resize: none;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.message-input .message-send:focus {
+  border-color: #3b82f6;
+}
+
+.message-input .button-send {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.message-input .button-send:hover {
+  background-color: #2563eb;
+}
+
+/* Moderator Notes */
+.moderator-note {
+  clear: both;
+  font-style: italic;
+  background: #fff8dc;
+  color: #92400e;
+  border-left: 5px solid #facc15;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}

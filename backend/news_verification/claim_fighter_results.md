@@ -20,11 +20,11 @@ Donald trump has purposefully increased tarrifs to show he is greater than other
 ### IMAGE Content
 
 ```
-This photo shows former U.S. President Donald Trump holding up a large sign detailing "Reciprocal Tariffs."  He is in mid-speech, his mouth slightly open, and appears to be presenting the information on the sign to an audience.
+A medium close-up photo of Donald Trump giving a speech while holding a large sign listing tariff rates. Trump is shown from the chest up, wearing a dark suit jacket, white shirt, and a bright red tie. He is speaking into a microphone which is angled up towards his mouth.  His expression is serious, and his mouth is slightly open. He appears to be mid-sentence.
 
-Trump wears a dark suit jacket, white shirt, and solid red tie. He holds the sign with his right hand.  A microphone is positioned in front of him.  A blurred American flag is visible in the background.
+The sign he holds is angled slightly toward the viewer, and dominates the right portion of the frame. The sign is dark with gold and light-teal lettering and accents. In large, bold white letters, it reads: "Reciprocal Tariffs." Below this, a graphic depicting the Presidential Seal of the United States is present.  A two-column table follows, with the header “Country” in the first column and “Tariffs Charged to the U.S.A.” in the second.  The list of countries includes China, the European Union, Vietnam, Taiwan, Japan, India, South Korea, Thailand, Switzerland, Indonesia, Malaysia, Cambodia, and the United Kingdom. The percentages listed in the “Tariffs Charged to the U.S.A.” column vary, ranging from 39% (European Union) to 97% (Cambodia). A smaller, partially obscured third column on the sign appears to list another set of related percentages.
 
-The sign itself is dark, possibly black, with gold trim.  The title "Reciprocal Tariffs" is prominently displayed at the top, along with a circular presidential seal. Below the title, a table lists countries in a light blue/teal font and corresponding tariff percentages in white, organized in two columns. The left column lists various countries, including China, European Union members, Vietnam, Taiwan, Japan, India, South Korea, Thailand, Switzerland, Indonesia, Malaysia, Cambodia, and the United Kingdom. The right column displays percentages, seemingly representing the tariffs charged by those countries to the U.S.  A smaller header above this column clarifies that these figures include aspects like currency manipulation and trade barriers.  A third, partially visible column on the far right contains another set of gold-colored percentages.
+In the background, a portion of an American flag is slightly out of focus. The red and white stripes are clearly visible.
 ```
 
 ### AUDIO Content
@@ -124,7 +124,7 @@ With inputs from agencies
 ## Extracted Claims
 
 ```
-[{'claims': ['Donald Trump purposefully increased tariffs.', 'The tariff increase was to show he is greater than other countries.'], 'questions': ['What official documentation exists to confirm specific instances and dates of tariff increases initiated by Donald Trump during his presidency?', 'Are there official records or documented statements from Donald Trump explicitly stating that the purpose of increasing tariffs was to demonstrate superiority over other countries?']}]
+[{'claims': ['Donald Trump purposefully increased tariffs.', 'Donald Trump increased tariffs to show he is greater than other countries.'], 'questions': ["What official records document the specific instances and levels of tariff increases implemented during Donald Trump's presidency?", "What evidence, such as official statements, policy documents, or interviews, supports the claim that Donald Trump's motive for increasing tariffs was to demonstrate superiority over other countries?"]}]
 ```
 
 ## Debate Results
@@ -138,63 +138,48 @@ With inputs from agencies
 ```
 
 
-The claim that "Donald Trump purposefully increased tariffs" is **True**. 
+**Answer:**
 
-**Explanation:**
-
-1. **Deliberate Action:** During Trump's presidency, there were deliberate actions to increase tariffs. This was part of a broader strategy to address perceived trade imbalances, particularly with China. Trump frequently discussed these measures as part of his "America First" policy, aiming to protect domestic industries and bring jobs back to the U.S.
-
-2. **Trade War Context:** The increase in tariffs was a key component of the U.S.-China trade war. Trump's administration implemented tariffs on a wide range of Chinese goods, which were reciprocated, leading to significant discussions on the economic impacts on various sectors.
-
-3. **Official Documentation:** The Office of the United States Trade Representative (USTR) and other government agencies documented these tariff increases. News outlets and independent analyses, such as those from the Peterson Institute for International Economics, covered the implementation and effects of these tariffs.
-
-4. **Policy Continuity:** The continuation of certain tariffs under subsequent administrations, though with modifications, underscores that these were strategic decisions rather than arbitrary actions.
-
-In conclusion, the evidence from official sources, media coverage, and policy analyses supports the conclusion that Donald Trump purposefully increased tariffs as part of his administration's trade strategy.
+Donald Trump did purposefully increase tariffs during his presidency, particularly under Section 301 of U.S. trade law, targeting China. These tariffs were part of his "America First" policy, aimed at reducing the U.S. trade deficit and protecting domestic industries. The USTR and Federal Register would provide official documentation of these tariff increases. While the tariffs were intended to address perceived unfair trade practices, their effectiveness and the retaliatory measures by other countries, such as China, remain subjects of debate. To fully confirm the details and impacts, authoritative sources like government reports and economic analyses are necessary.
 ```
 
 **Llama Response:**
 
 ```
-**Analysis and Line of Questioning:**
+I'll engage with the opponent's response by directly addressing their claims while pushing for stronger evidence.
 
-I acknowledge the presence of evidence in the explanation but remain unconvinced by the weak and indirect measures that support the claim. To strengthen this argument, I request clarification and specific, authoritative sources to decisively settle the claim.
+**Initial Response:**
+While I acknowledge that Donald Trump did implement tariffs under Section 301, I'm not convinced that he "purposefully" increased tariffs without considering the broader economic implications. Therefore, I'd like to see more evidence to support this claim.
 
-1. **Deliberate Action Point:**
-   Although you mention deliberate actions to increase tariffs, I need **detailed, primary sources** to confirm the specific dates and implementation details of these decisions. What primary documents or testimony can you provide to support the notion that Trump purposefully increased tariffs, rather than a response to changing circumstances? 
+**Demand for Specific Evidence:**
+To strengthen the claim, I'd like to know: 
 
-2. **Trade War Context:**
-   It's true that the U.S.-China trade war involved tariff increases, but I'd like you to clarify whether these increases were **initial or reactive** measures during Trump's presidency. How do you rule out the possibility that tariff actions escalated inadvertently, particularly given the tit-for-tat nature of trade wars? 
+1. Can you cite a specific instance where Trump explicitly stated his intention to increase tariffs as a tool to reduce the U.S. trade deficit? I'm looking for direct quotes from Trump or his representatives in government reports, such as the USTR's Annual Report to Congress.
+2. Are there any official economic assessments or models that demonstrate the effectiveness of Trump's tariff policy in achieving its stated goals? I'd like to see data from reputable sources, such as the Congressional Budget Office (CBO) or the Federal Reserve.
+3. What specific "unfair trade practices" by China are being targeted, and are there official records of these practices? I'm not aware of any U.S. trade complaints filed with the World Trade Organization (WTO) that match Trump's rationale for the tariffs.
+4. Can you provide more information about the "retaliatory measures" by other countries, such as China, and their economic impact on the U.S.? How have these measures affected U.S. trade and jobs?
 
-3. **Official Documentation:**
-   While you mention documentation by the USTR and other government agencies, I'd need **verbatim statements** or **exact quotes** from these documents that explicitly state Trump's intention to purposefully increase tariffs. You mention news outlets and independent analyses; could you cite **primary sources** that directly link Trump to the decision-making process for specific tariff increases?
-
-4. **Policy Continuity:**
-   While it's plausible that subsequent administrations continued tariffs with modifications, **how can you establish a clear causal link** between Trump's strategic trade decisions and the continuation of tariffs under the next administration? Ensure you address possible counterarguments, such as the role of changing economic conditions or other policy developments.
-
-**Additional Request:**
-I'd appreciate it if you could specifically address the potential **motivations behind Trump's tariff increases**, such as whether he saw them as a strategic means to obtain concessions or impose punishment. A more nuanced understanding of these dynamics can clarify the purpose behind Trump's actions and add depth to this line of argumentation.
-
-Let's engage further by establishing a clear evidence base that justifies the claim that Trump purposefully increased tariffs.
+**Improved Request for Evidence:**
+To confirm my doubts, I need more evidence from official sources, including government reports, economic analyses, and trade agreements. Without this supporting evidence, the claim that Trump "purposefully" increased tariffs remains speculative. Can you provide specific sources to support your argument?
 ```
 
 **Gemini Arbitrator:**
 
 ```
-{'status': 1, 'gemini_reason': "DeepSeek provided an initial argument that, while accurate, lacked specific sourcing to support the claim that Donald Trump 'purposefully' increased tariffs as a strategic move. LLaMA's counter-argument effectively identifies these gaps, demanding more concrete, primary-source evidence such as official documentation, verbatim statements linking Trump to decision-making, and clarification on whether tariff increases were initial or reactive. The debate should continue until more compelling evidence is presented. The existing evidence is too vague and open to interpretation, warranting further scrutiny and concrete examples.", 'llama_reason': "LLaMA's argument is strongest because it directly challenges the lack of specific and authoritative sources in DeepSeek's initial claim. It demands primary sources, verbatim statements, and clarification on the intent behind the tariff increases, pushing for a more robust evidentiary foundation.", 'deepseek_reason': "DeepSeek's argument, while initially providing a general overview, lacks the necessary depth of evidence to conclusively prove that Trump 'purposefully' increased tariffs. The explanation provides only general references to media coverage and policy analyses, without specific citations or direct links to Trump's intent.", 'questions': ['official documentation of Trump administration tariff decisions', 'verbatim statements from USTR reports on tariff increases under Trump', "Trump's public statements on the purpose of tariff increases", 'primary source evidence linking Trump directly to tariff decision-making', "economic analysis of the impact of Trump's tariffs from government agencies", "causal link between Trump's tariffs and subsequent trade policies", "motivations behind Trump's tariff increases strategic concessions or punishment", 'USTR reports verbatim quotes tariffs Trump']}
+{'status': 1, 'gemini_reason': "The debate should continue because LLaMA has asked for specific evidence related to Trump's intentions and the economic impact of the tariffs, which DeepSeek has not yet provided with sufficient authoritative sources. More fact-checking is needed to determine the validity of both sides' claims.", 'llama_reason': "LLaMA's argument is strong because it specifically asks for official sources, such as government reports and economic analyses, to support the claim that Trump purposefully increased tariffs. This demand for concrete evidence is crucial for substantiating the argument.", 'deepseek_reason': "DeepSeek's argument provides a general overview of Trump's tariff policies, but it lacks specific, verifiable evidence to support its claims. It mentions sources like the USTR and Federal Register but doesn't provide specific citations or data.", 'questions': ['Donald Trump tariffs USTR report', 'Economic impact of Trump tariffs CBO analysis', 'US trade complaints against China WTO', 'China retaliatory measures against US tariffs economic impact', 'Trump administration trade policy goals official statements']}
 ```
 
 **Fact-Check Sources:**
 
-- **Question:** official documentation of Trump administration tariff decisions
-- **Source:** {'query': 'official documentation of Trump administration tariff decisions', 'follow_up_questions': None, 'answer': None, 'images': [], 'results': [{'url': 'https://www.pbs.org/newshour/economy/a-timeline-of-trumps-tariff-actions-so-far', 'title': "A timeline of Trump's tariff actions so far | PBS News", 'content': 'Left: President Donald Trump holds a "Foreign Trade Barriers" document as he delivers remarks on tariffs in the Rose Garden at the White House on April 2, 2025. Photo by Carlos Barria/ Reuters\nRelated', 'score': 0.5697814, 'raw_content': None}], 'response_time': 2.92}
+- **Question:** Donald Trump tariffs USTR report
+- **Source:** {'query': 'Donald Trump tariffs USTR report', 'follow_up_questions': None, 'answer': None, 'images': [], 'results': [{'url': 'https://www.reuters.com/world/us/ustr-releases-trade-barriers-report-ahead-trumps-reciprocal-tariffs-2025-03-31/', 'title': "USTR releases trade barriers report ahead of Trump's reciprocal tariffs", 'content': 'Last week, Trump announced 25% tariffs on U.S. auto imports in a move aimed at rebuilding U.S. production but which threaten new price shocks. "', 'score': 0.76512027, 'raw_content': None}], 'response_time': 1.22}
 
-- **Question:** verbatim statements from USTR reports on tariff increases under Trump
-- **Source:** {'query': 'verbatim statements from USTR reports on tariff increases under Trump', 'follow_up_questions': None, 'answer': None, 'images': [], 'results': [{'url': 'https://ustr.gov/about-us/policy-offices/press-office/press-releases/2019/august/ustr-statement-section-301-tariff', 'title': 'USTR Statement on Section 301 Tariff Action Regarding China', 'content': 'President Trump has instructed the United States Trade Representative (USTR) to increase by 5% the tariffs on approximately $550 billion worth of Chinese', 'score': 0.67706895, 'raw_content': None}], 'response_time': 1.61}
+- **Question:** Economic impact of Trump tariffs CBO analysis
+- **Source:** {'query': 'Economic impact of Trump tariffs CBO analysis', 'follow_up_questions': None, 'answer': None, 'images': [], 'results': [{'url': 'http://democrats-budget.house.gov/news/press-releases/new-cbo-analysis-exposes-devastating-impact-trumps-tariffs', 'title': "New CBO Analysis Exposes Devastating Impact of Trump's Tariffs", 'content': 'CBO found that this kind of tariff increase would make U.S. goods more expensive, add uncertainty for businesses, reduce productivity, and', 'score': 0.84767824, 'raw_content': None}], 'response_time': 1.32}
 
 ---
 
-### Claim: The tariff increase was to show he is greater than other countries.
+### Claim: Donald Trump increased tariffs to show he is greater than other countries.
 
 #### Round 1
 
@@ -203,49 +188,55 @@ Let's engage further by establishing a clear evidence base that justifies the cl
 ```
 
 
-The claim that "the tariff increase was to show he is greater than other countries" is a simplification of the motivations behind Donald Trump's tariff policies. While there was an element of asserting U.S. strength and dominance in Trump's approach to trade, the primary reasons for the tariff increases were more multifaceted. These included addressing perceived unfair trade practices by China, such as intellectual property theft and forced technology transfers, reducing the trade deficit, and protecting domestic industries. The impact of these tariffs was also complex, leading to both changes in trade practices and retaliatory measures from other nations. Therefore, while Trump's rhetoric often emphasized American strength, the primary motivations for the tariff increases were rooted in economic protectionism and trade negotiations rather than solely demonstrating U.S. superiority.
+Donald Trump's increase of tariffs during his presidency was multifaceted and driven by several key factors:
+
+1. **Economic Protectionism**: Tariffs were implemented to protect domestic industries, particularly in sectors like steel and aluminum, under the guise of national security. This was aimed at reducing reliance on foreign imports and encouraging the return of manufacturing jobs to the U.S.
+
+2. **Trade Strategy**: The tariffs, especially those imposed on China, were part of a broader strategy to reduce the U.S. trade deficit and address issues such as intellectual property theft. This approach was part of Trump's "America First" policy, aiming to renegotiate trade deals on more favorable terms for the U.S.
+
+3. **Political Messaging**: Trump's administration framed these tariff increases as assertive moves to project U.S. strength and leadership in international trade. This narrative aligned with his campaign promises to put America first and appeal to his voter base concerned about globalization and job losses.
+
+4. **Global Economic Impact**: While the intention was to strengthen the U.S. economy and negotiating position, the tariffs also led to trade wars, with other countries imposing retaliatory measures. This had mixed effects, including higher consumer prices and economic tensions.
+
+In conclusion, while the primary motivations for increasing tariffs were economic and strategic, the manner in which these actions were presented and framed by Trump's administration also served to project U.S. dominance on the global stage. Thus, the tariff increases were both a strategic economic move and a tool for projecting national strength.
 ```
 
 **Llama Response:**
 
 ```
-**Analysis and Line of Questioning:**
+While the opponent provides a more nuanced explanation of the motivations behind Trump's tariff increases, I'd like to engage with their argument by pushing for even stronger evidence and exploring potential inconsistencies.
 
-While I acknowledge that your revised explanation provides a more nuanced understanding of Trump's tariff policies, I still need **clearer justifications** and **authoritative sources** to support the claim that these motivations were primary.
+**Engaging with the Argument:**
+The opponent's response acknowledges the complexity of Trump's motivations but still frames his actions as driven by a mix of economic protectionism, trade strategy, and political messaging. To substantiate this claim, I'd like to see more direct evidence from credible sources.
 
-1. **Addressing Unfair Trade Practices:**
-   I'd like to know more about the specific evidence of **intellectual property theft and forced technology transfers** by China. You may have mentioned that these were perceived practices by Trump's administration, but **can you provide concrete examples** of instances when China engaged in these activities? What documentation or testimony supports this claim?
+**Demand for Specific Evidence:**
 
-2. **Economic Protectionism and Trade Negotiations:**
-   While it's true that Trump's rhetoric often emphasized American strength, how do you definitively rule out that this aspect was a key driver of the tariff increases? **Survey data** or **opinion polling** might reveal the extent to which the public believed the U.S. was at a disadvantage in trade. More importantly, were there **specific concessions** or **diplomatic breakthroughs** in trade negotiations resulting from the tariff increases?
+1. **Primary Sources:** Can you provide direct quotes or statements from Trump, his administration, or other key officials that explicitly link the tariff increases to asserting U.S. dominance or projecting national strength? I'm looking for primary sources like speeches, press briefings, or government reports that support this narrative.
+2. **Economic Impact Studies:** The opponent mentions the "mixed effects" of the tariffs, including higher consumer prices and economic tensions. Can you cite specific economic analyses or studies that quantify these effects and assess the overall economic impact of the tariffs? I'm interested in seeing data from reputable organizations like the International Monetary Fund (IMF), the World Bank, or the Congressional Budget Office (CBO).
+3. **Global Economic Trends:** How does the opponent's argument take into account the broader global economic context during Trump's presidency? Was the U.S. facing increasing economic competition from other major powers, or was it simply seeking to renegotiate trade deals to level the playing field? Can you provide evidence from global economic reports or analyses that supports this claim?
+4. **Comparative Analysis:** Has the opponent considered the potential for Trump's actions to be driven by factors other than "showing he is greater" or asserting U.S. dominance? For example, could the administration's protectionist policies be driven by more pragmatic concerns about softening economic data, rising debt levels, or other economic realities? Should we not consider alternative explanations for the administration's actions, even if they are less palatable to Trump's critics?
 
-3. **Complex Impact of Tariffs:**
-   I agree that the impact of the tariffs was complex. However, how do you pinpoint a **causal link** between tariff increases and the changes in trade practices and retaliatory measures? **Studies** or **analyses** that examine the feedback loops and outcomes of the tariffs would support this claim.
+**Improved Request for Evidence:**
+To strengthen the claim that Trump's tariff increases were motivated by a desire to assert U.S. dominance, I need more evidence from credible sources that directly supports this narrative. Without additional evidence, it remains unclear whether this was a primary or secondary motivation behind the administration's actions. Can you provide specific sources to justify this claim?
 
-4. **Primary Motivations:**
-   I'd appreciate clarification on **how you distinguish between primary and secondary motivations** for the tariff increases. What specific data or evidence leads you to conclude that economic protectionism and trade negotiations were the primary drivers, rather than, say, Trump's perceived desire to assert American strength?
 
-**Additional Request:**
-Consider addressing potential counterarguments, such as:
 
-* **Timeline analysis:** How does the sequence of events between Trump's tariff announcements and subsequent trade talks/concessions reinforce the idea that the tariffs were primarily driven by economic protectionism?
-
-Let's continue to engage in a more informed discussion by applying further scrutiny to the motivations and impacts of the tariff increases.
+In addition, the way this topic is worded almost always invites a critical look into Trump's motivations, which inevitably circles around a "greater than" mind-set. Because of this, considering sources from the *right wing* or the *conservative* makes just about any reasoning questionable on the subject of Trump's greatness claims.
 ```
 
 **Gemini Arbitrator:**
 
 ```
-{'status': 1, 'gemini_reason': "DeepSeek refutes the original claim by arguing that the tariff increases were multifaceted, primarily driven by economic protectionism and trade negotiations rather than a simple desire to show American superiority. LLaMA's counter-argument effectively presses for specific evidence to support DeepSeek's claim, especially regarding unfair trade practices, economic protectionism, and the distinction between primary and secondary motivations. The debate needs more factual support to determine the primary drivers behind Trump's tariff policies. Specifically, LLaMA asked for survey data, opinion polling, and evidence on specific concessions or diplomatic breakthroughs, which warrants further investigation.", 'llama_reason': "LLaMA's strongest argument is its demand for concrete examples and authoritative sources to support DeepSeek's assertions about the primary motivations behind Trump's tariff policies. By asking for specific evidence of intellectual property theft, survey data on public perception, and details on trade concessions, LLaMA effectively challenges the lack of substantiation in DeepSeek's claims.", 'deepseek_reason': "DeepSeek's argument effectively refutes the original claim by presenting a more nuanced view of the motivations behind the tariff increases. However, it lacks specific evidence to fully support its counter-arguments, making it difficult to definitively assess the validity of its claims.", 'questions': ['examples of Chinese intellectual property theft cited by the Trump administration', "survey data on American public opinion on trade imbalances during Trump's presidency", "specific concessions or diplomatic breakthroughs resulting from Trump's tariff increases", "studies analyzing the causal link between Trump's tariffs and changes in trade practices", 'Trump administration statements prioritizing economic protectionism over demonstrating U.S. superiority', "timeline analysis of Trump's tariff announcements and subsequent trade talks", 'evidence trade practices retaliatory measures economic protectionism', 'USTR reports intellectual property theft China Trump tariffs']}
+{'status': 1, 'gemini_reason': "The debate should continue. LLaMA is pushing for specific evidence linking Trump's tariff increases to a desire to 'show he is greater than other countries,' which requires more than just general economic or strategic justifications. While DeepSeek outlines multiple factors, it needs stronger substantiation for the 'political messaging' aspect and how it directly translates to projecting dominance. The question of intent requires deeper investigation.", 'llama_reason': "LLaMA's key argument is its demand for primary sources (direct quotes, speeches) that explicitly link the tariff increases to asserting U.S. dominance. This focuses the debate on the core claim and requires DeepSeek to provide more than just circumstantial evidence.", 'deepseek_reason': "DeepSeek's most influential point is outlining the multiple factors driving the tariff increases, including economic protectionism, trade strategy, and political messaging. However, it needs stronger sources to connect the political messaging directly to the claim of wanting to 'show he is greater than other countries.'", 'questions': ['Donald Trump speeches on tariffs US dominance', 'Trump administration statements on trade as a measure of national strength', 'Economic impact of Trump tariffs IMF analysis', 'Public opinion on Trump tariffs and US global image', "Analysis of Trump's 'America First' policy and its impact on international relations"]}
 ```
 
 **Fact-Check Sources:**
 
-- **Question:** examples of Chinese intellectual property theft cited by the Trump administration
-- **Source:** {'query': 'examples of Chinese intellectual property theft cited by the Trump administration', 'follow_up_questions': None, 'answer': None, 'images': [], 'results': [{'url': 'https://journals.library.columbia.edu/index.php/CBLR/announcement/view/180', 'title': 'The Trump Administration and Chinese Intellectual Property Theft', 'content': 'Since 2016, however, Chinese trade secret theft has\xa0once again increased\xa0at an alarming pace.\xa0 In response, the Trump administration has thus far maintained the Obama-era push for more prosecutions regarding trade secret theft,\xa0bringing nine such cases in 2017.\xa0 That initial surge was followed by a number of high-profile indictments, including the Micron and Huawei cases, as well as a\xa0pair of cases\xa0involving Chinese employees working on Apple’s self-driving car technology.\xa0 Additionally, in [...] First, enforcement remains a significant challenge, as American officials struggle to hold Chinese companies and nationals accountable for their crimes.\xa0\xa0The drawn-out extradition process\xa0that faces officials in the separate fraud prosecution of Huawei executive Meng Wanzhou provides just one example of such challenges.\xa0 The new DOJ initiative has included steps to address this problem, including\xa0relaxed service requirements for criminal indictments involving foreign companies, a move that has [...] Chinese government to fight the problem at home and stiff consequences for failing to do so.\xa0 In the meantime, the Trump administration must provide federal prosecutors the support necessary to continue to pursue cases like the Huawei indictment.', 'score': 0.8488849, 'raw_content': None}], 'response_time': 3.05}
+- **Question:** Donald Trump speeches on tariffs US dominance
+- **Source:** {'query': 'Donald Trump speeches on tariffs US dominance', 'follow_up_questions': None, 'answer': None, 'images': [], 'results': [{'url': 'https://www.youtube.com/watch?v=ndAqkPgaQ4w', 'title': 'FULL SPEECH: Trump unveils sweeping tariffs on imports - YouTube', 'content': 'In a speech, President Donald Trump announced that he was imposing a 10% baseline tax on imports from all countries and even higher tariff', 'score': 0.50432175, 'raw_content': None}], 'response_time': 1.57}
 
-- **Question:** survey data on American public opinion on trade imbalances during Trump's presidency
-- **Source:** {'query': "survey data on American public opinion on trade imbalances during Trump's presidency", 'follow_up_questions': None, 'answer': None, 'images': [], 'results': [{'url': 'https://www.pewresearch.org/short-reads/2025/04/08/how-americans-view-trade-between-the-us-and-china-canada-and-mexico/', 'title': 'US views of trade with China, Canada and Mexico amid tariff hikes', 'content': 'The survey of 3,605 U.S. adults, conducted March 24-30, comes as President Donald Trump imposes higher tariffs on imports from all three', 'score': 0.7152057, 'raw_content': None}], 'response_time': 1.24}
+- **Question:** Trump administration statements on trade as a measure of national strength
+- **Source:** {'query': 'Trump administration statements on trade as a measure of national strength', 'follow_up_questions': None, 'answer': None, 'images': [], 'results': [{'url': 'https://www.whitehouse.gov/fact-sheets/2025/04/fact-sheet-president-donald-j-trump-declares-national-emergency-to-increase-our-competitive-edge-protect-our-sovereignty-and-strengthen-our-national-and-economic-security/', 'title': 'Fact Sheet: President Donald J. Trump Declares National ...', 'content': 'PURSUING RECIPROCITY TO REBUILD THE ECONOMY AND RESTORE NATIONAL AND ECONOMIC SECURITY: Today, President Donald J. Trump declared that foreign trade and economic practices have created a national emergency, and his order imposes responsive tariffs to strengthen the international economic position of the United States and protect American workers. [...] He is the first President in modern history to stand strong for hardworking Americans by asking other countries to follow the golden rule on trade: Treat us like we treat you.\nPernicious economic policies and practices of our trading partners undermine our ability to produce essential goods for the public and the military, threatening national security. [...] Reciprocal trade is America First trade because it increases our competitive edge, protects our sovereignty, and strengthens our national and economic security.\nThese tariffs adjust for the unfairness of ongoing international trade practices, balance our chronic goods trade deficit, provide an incentive for re-shoring production to the United States, and provide our foreign trading partners with an opportunity to rebalance their trade relationships with the United States.', 'score': 0.62303346, 'raw_content': None}], 'response_time': 2.07}
 
 ---
 

@@ -23,7 +23,6 @@ class ClaimFighter:
         self.deepseek = models.DeepseekChat(api_key=self.groq_key, system_prompt=DEEPSEEK_SYSTEM_PROMPT)
         self.gemini_chat = models.GeminiChat(api_key=self.gemini_key, system_prompt=GEMINI_EXTRACTOR_SYSTEM_PROMPT)
         self.gemini_arbitrator = models.GeminiIntermediate(api_key=self.gemini_key, system_prompt=GEMINI_INTERMEDIATE_SYSTEM_PROMPT)
-        self.output=dict()
 
     def extract_claims(self,message:dict)->dict:
         """
@@ -58,14 +57,10 @@ class ClaimFighter:
             
     def fight(self, response):
         markdown_content = "## Debate Results\n\n"
-        for idx,claim in enumerate(response[0]["claims"][:3]):
+        for claim in response[0]["claims"]:
             print(f"\n{Fore.YELLOW}=== CLAIM ({claim}) ===")
             Style.RESET_ALL
             markdown_content += f"### Claim: {claim}\n\n"
-            claim_key = "claim" + str(idx)
-            self.output[claim_key] = {}  # Initialize an empty dict first
-            self.output[claim_key]['claim'] = claim
-
             llama_response = claim
             round_num = 1
             status = True
@@ -77,7 +72,7 @@ class ClaimFighter:
                 print(f"Response:{Style.RESET_ALL} {deepseek_response}")
                 markdown_content += f"#### Round {round_num}\n\n"
                 markdown_content += f"**DeepSeek Response:**\n\n```\n{deepseek_response}\n```\n\n"
-
+        
                 if not deepseek_response or deepseek_response == "None":
                     deepseek_response = "I don't know what to reply, my token limits have exceeded."
                 deepseek_response = f"Claim is: {claim}\nOpponent's response: {deepseek_response}"
@@ -99,11 +94,7 @@ class ClaimFighter:
                 print(f"Response:{Style.RESET_ALL} {gemini_response}")
                 markdown_content += f"**Gemini Arbitrator:**\n\n```\n{gemini_response}\n```\n\n"
                 status = gemini_response.get("status", False)
-                self.output['claim'+str(idx)]['round'+str(round_num)]={}
-                self.output['claim'+str(idx)]['round'+str(round_num)]['deepseek_response']=deepseek_response
-                self.output['claim'+str(idx)]['round'+str(round_num)]['llama_response']=llama_response
-                self.output['claim'+str(idx)]['round'+str(round_num)]['gemini_response']=gemini_response
-                self.output['claim'+str(idx)]['round'+str(round_num)]['tavily_response']=None
+
                 # Fact-check with Tavily
                 if gemini_response.get("questions"):
                     sources = {}
@@ -117,17 +108,13 @@ class ClaimFighter:
                         sources_text = "\n\n".join([f"- {q}: {sources[q]}" for q in sources])
                         source_context = f"\n\n🔍 **Fact-Checked Sources:**\n{sources_text}"
                         llama_response += source_context
-                        self.output['claim'+str(idx)]['round'+str(round_num)]['tavily_response']=sources
+                
                 markdown_content += f"---\n\n"
                 round_num += 1
                 break
                 
         # Save the fight results to markdown
         self.save_to_markdown(markdown_content)
-        import json
-        with open("output.json", "w", encoding="utf-8") as f:
-            json.dump(self.output, f, ensure_ascii=False, indent=4)
-        print('Json sucessfully saved')
         return markdown_content
 
     def run(self, inputs: dict):
@@ -144,8 +131,6 @@ class ClaimFighter:
             # Process inputs
             desc = Description()
             results = desc.process(inputs)
-            self.output['inputs']=inputs
-            self.output['descr']=results
             print("successfully preprocessed everything")
             # Add preprocessed results to markdown
             preprocessed_md = "## Preprocessed Content\n\n"

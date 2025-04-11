@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+
+<!-- From Uiverse.io by ahmed150up -->
+<div class="card-container">
+    <div class="card-header">
+        <div class="img-avatar"></div>
+        <div class="text-chat">Chat</div>
+    </div>
+    <div class="card-body">
+        <div class="messages-container">
+            {% for key, value in output.items() %}
+            {% if key not in ['inputs', 'descr'] %}
+            <div class="text-chat">
+                <h3>Claim: {{ value.claim }}</h3>
+
+                {% for round_key, round_value in value.items() %}
+                {% if round_key.startswith('round') %}
+                <div class="card-body">
+                    <h4>{{ round_key|title }}</h4>
+
+                    <div class="message-box left">
+                        <p><strong>DeepSeek:</strong> {{ round_value.deepseek_response }}</p>
+                    </div>
+
+                    <div class="message-box right">
+                        <p><strong>LLaMA:</strong> {{ round_value.llama_response }}</p>
+                    </div>
+
+                    {% if round_value.gemini_response %}
+                    <div class="moderator-note">
+                        <p><em>Moderator Note:</em> {{ round_value.gemini_response.gemini_reason }}</p>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endfor %}
+
+
+
+        </div>
+
+    </div>
+</div>
+{%endblock%}

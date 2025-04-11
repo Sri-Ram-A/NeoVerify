@@ -38,12 +38,38 @@ def process_upload():
         results['text_entry'] = user_text
     else:
         results['text_entry'] = "No text entered"
-    
     # Handle URL input
     url = request.form.get('url', '')
     results['url'] = url if url else "No URL provided"
-
+    fighter = ClaimFighter()
+    fighter.run(results)
     return render_template('upload.html', results=results)
+
+@app.route('/knowledge_graph')
+def knowledge_graph():
+    import json
+    try:
+        with open("/workspaces/fantom_code/backend/news_verification/output.json", 'r', encoding='utf-8') as file:
+            output = json.load(file)
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        return None
+    if output:
+        print("Successfully loaded JSON data into dictionary")
+    return render_template('knowledge_graph.html',output=output)
+
+@app.route('/chat')
+def chat():
+    import json
+    try:
+        with open("/workspaces/fantom_code/backend/news_verification/output.json", 'r', encoding='utf-8') as file:
+            output = json.load(file)
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        return None
+    if output:
+        print("Successfully loaded JSON data into dictionary")
+    return render_template('chat.html',output=output)
 
 if __name__ == '__main__':
     app.run(debug=True)

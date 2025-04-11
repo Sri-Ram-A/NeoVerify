@@ -1,0 +1,58 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Binary Tree Structure</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/graph.css') }}">
+
+</head>
+
+<body>
+	<div class="card">
+  <div class="bg"></div>
+  <div class="blob"></div>
+</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="tree">
+				<ul>
+					<li> <a href="#"><img src="images/1.jpg"><span>Inputs</span></a>
+						<ul>
+							{%for input in output["inputs"]%}
+							<li> <a href="#"><img src="images/1.jpg"><span>{{input}}</span></a>
+							</li>
+							{%endfor%}
+						</ul>
+					</li>
+				</ul>
+				<ul>
+				<li> <a href="#"><img src="images/1.jpg"><span>claims</span></a>
+					<ul>
+						{%for key,value in output.items() %}
+							{% if key not in ['inputs', 'descr'] %}
+						<li> <a href="#"><img src="images/1.jpg"><span>{{key}}</span></a>
+							{%for inner_key,value_of_inner_key in value.items()%}
+								{%if inner_key not in ['claim']%}
+								<ul>
+								<li> <a href="#"><img src="images/1.jpg"><span>{{inner_key}}</span></a>
+								</ul>
+								{%endif%}
+							{%endfor%} 
+						</li>
+						{% endif %}
+						{%endfor%}
+					</ul>	
+				</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
