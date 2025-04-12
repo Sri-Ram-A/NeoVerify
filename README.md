@@ -1,8 +1,8 @@
-# ClaimFighter - Advanced News Verification System
+# NeoVerify - Advanced News Verification System
 
-![ClaimFighter Logo](https://via.placeholder.com/350x100?text=ClaimFighter+Logo)
+![NeoVerify Logo](https://via.placeholder.com/350x100?text=NeoVerify+Logo)
 
-**ClaimFighter** is a sophisticated news verification system that analyzes multimedia content and verifies claims through an AI-powered debate process. It helps users identify misinformation by pitting different AI models against each other in structured debates.
+**NeoVerify** is a sophisticated news verification system that analyzes multimedia content and verifies claims through an AI-powered debate process. It helps users identify misinformation by pitting different AI models against each other in structured debates.
 
 ## 📋 Table of Contents
 - [System Overview](#system-overview)
@@ -19,9 +19,9 @@
 
 ## 🔍 System Overview
 
-ClaimFighter is designed to combat misinformation by extracting and verifying claims from various media types. The system utilizes multiple AI models (Llama, DeepSeek, and Gemini) to debate and fact-check claims, providing users with a comprehensive analysis of potentially misleading information.
+NeoVerify is designed to combat misinformation by extracting and verifying claims from various media types. The system utilizes multiple AI models (Llama, DeepSeek, and Gemini) to debate and fact-check claims, providing users with a comprehensive analysis of potentially misleading information.
 
-![System Workflow](https://via.placeholder.com/800x400?text=ClaimFighter+Workflow)
+![System Workflow](https://via.placeholder.com/800x400?text=NeoVerify+Workflow)
 
 ## ✨ Features
 
@@ -62,8 +62,8 @@ ClaimFighter is designed to combat misinformation by extracting and verifying cl
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/claimfighter.git
-cd claimfighter
+git clone https://github.com/yourusername/NeoVerify.git
+cd NeoVerify
 ```
 
 2. Create a virtual environment:
@@ -112,7 +112,7 @@ http://localhost:5000
 
 ## ⚙️ How It Works
 
-ClaimFighter operates through a sequential process:
+NeoVerify operates through a sequential process:
 
 1. **Input Processing**: Various media inputs are processed and converted to textual descriptions
    - Images: Described using Gemini Vision
@@ -144,7 +144,7 @@ The system consists of several key components:
 ### `Description` Class (preprocessor.py)
 Handles multi-modal content processing, extracting textual information from various media types.
 
-### `ClaimFighter` Class (op.py)
+### `NeoVerify` Class (op.py)
 The main orchestrator that:
 - Initializes API connections
 - Processes user inputs
@@ -169,16 +169,16 @@ Provides a web interface for:
 ## 🎬 Demo
 
 ### Main Interface
-![Main Interface](https://via.placeholder.com/800x400?text=ClaimFighter+Main+Interface)
+![Main Interface](https://via.placeholder.com/800x400?text=NeoVerify+Main+Interface)
 
 ### Upload Page
-![Upload Page](https://via.placeholder.com/800x400?text=ClaimFighter+Upload+Page)
+![Upload Page](https://via.placeholder.com/800x400?text=NeoVerify+Upload+Page)
 
 ### Knowledge Graph
-![Knowledge Graph](https://via.placeholder.com/800x400?text=ClaimFighter+Knowledge+Graph)
+![Knowledge Graph](https://via.placeholder.com/800x400?text=NeoVerify+Knowledge+Graph)
 
 ### Chat Interface
-![Chat Interface](https://via.placeholder.com/800x400?text=ClaimFighter+Chat+Interface)
+![Chat Interface](https://via.placeholder.com/800x400?text=NeoVerify+Chat+Interface)
 
 ## 🤝 Contributing
 
