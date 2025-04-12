@@ -1,5 +1,5 @@
 # NeoVerify - Advanced News Verification System
-![NeoVerify_Logo](fantom_code_final/backend/news_verification/static/images/neoVerifyLogo.png)
+![NeoVerify_Logo]( backend/news_verification/static/images/neoVerifyLogo.png)
 **NeoVerify** is a sophisticated news verification system that analyzes multimedia content and verifies claims through an AI-powered debate process. It helps users identify misinformation by pitting different AI models against each other in structured debates.
 
 ## 📋 Table of Contents
@@ -159,21 +159,21 @@ Provides a web interface for:
 - **DeepSeek**: Acts as the primary fact-checker
 - **Gemini**: Extracts claims, arbitrates debates, and identifies fact-checking needs
 
-![Architecture Diagram](fantom_code_final/backend/news_verification/static/images/architecture.png)
+![Architecture Diagram]( backend/news_verification/static/images/architecture.png)
 
 ## 🎬 Demo
 
 ### Main Interface
-![Main Interface](fantom_code_final/backend/news_verification/static/images/heroSection.png)
+![Main Interface]( backend/news_verification/static/images/heroSection.png)
 
 ### Upload Page
-![Upload Page](fantom_code_final/backend/news_verification/static/images/uploadSection.png)
+![Upload Page]( backend/news_verification/static/images/uploadSection.png)
 
 ### Knowledge Graph
-![Knowledge Graph](fantom_code_final/backend/news_verification/static/images/knowledgeGraphSection.png)
+![Knowledge Graph]( backend/news_verification/static/images/knowledgeGraphSection.png)
 
 ### Chat Interface
-![Chat Interface](fantom_code_final/backend/news_verification/static/images/chatSection.png)
+![Chat Interface]( backend/news_verification/static/images/chatSection.png)
 
 ## 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
