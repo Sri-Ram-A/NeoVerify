@@ -164,7 +164,7 @@ Provides a web interface for:
 - **DeepSeek**: Acts as the primary fact-checker
 - **Gemini**: Extracts claims, arbitrates debates, and identifies fact-checking needs
 
-![Architecture Diagram](https://via.placeholder.com/800x500?text=ClaimFighter+Architecture)
+![Architecture Diagram](backend/news_verification/static/images/architecture.png)
 
 ## 🎬 Demo
 
