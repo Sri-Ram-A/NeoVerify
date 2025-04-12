@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os
 from werkzeug.utils import secure_filename
-from op import ClaimFighter
+from fighter import ClaimFighter
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max upload

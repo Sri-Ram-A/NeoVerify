@@ -6,7 +6,13 @@
 <div class="card-container">
     <div class="card-header">
         <div class="img-avatar"></div>
-        <div class="text-chat">Chat</div>
+        <div class="text-chat">Chat
+            <button id="downloadBtn" class="download-button">
+                <i class="fas fa-download"></i> Download Results
+            </button>
+        </div>
+        <!-- Add download button in header -->
+        
     </div>
     <div class="card-body">
         <div class="messages-container">
@@ -39,11 +45,43 @@
             </div>
             {% endif %}
             {% endfor %}
-
-
-
         </div>
-
     </div>
 </div>
-{%endblock%}
+
+<script>
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+        // Create a temporary link element
+        const link = document.createElement('a');
+        link.href = "{{ url_for('static', filename='claim_fighter_results.md') }}";
+        link.download = 'claim_fighter_results.md'; // You can change the filename if needed
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+</script>
+
+<style>
+    /* Style for the download button */
+    .download-button {
+        right:15px;
+        transform: translateY(-50%);
+        padding: 8px 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s;
+    }
+    
+    .download-button:hover {
+        background-color: #45a049;
+    }
+    
+    .download-button i {
+        margin-right: 5px;
+    }
+</style>
+{% endblock %}

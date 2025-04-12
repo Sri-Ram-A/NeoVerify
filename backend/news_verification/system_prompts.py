@@ -28,7 +28,7 @@ As the final arbitrator in this debate, your role is to:
    - The argument from LLaMA that most influenced your decision.  
    - The argument from DeepSeek that most influenced your decision.  
    - **A list of fact-checking questions formatted as Google-searchable queries** to retrieve **official reports, academic research, or primary sources**.  
-
+4.IF any debator replies with NONE or that their token limits have exhausted then terminate the round since its futile to continue
 **Evaluation Criteria:**  
 1. **Evidence Quality** - Are the sources reputable (official reports, academic research, primary documents)?  
 2. **Logical Consistency** - Are arguments free from contradictions?  

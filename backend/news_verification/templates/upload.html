@@ -1,6 +1,82 @@
 {% extends "base.html" %}
 {% block title %}NeoVerify - Upload & Process{% endblock %}
 {% block content %}
+<style>
+    /* From Uiverse.io by Sergestra */
+    /* Modified to only apply to the action buttons */
+    .results-section button {
+        outline: 0;
+        border: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 140px;
+        height: 50px;
+        border-radius: 0.5em;
+        box-shadow: 0 0.625em 1em 0 rgba(30, 143, 255, 0.35);
+        overflow: hidden;
+        margin: 0 10px; /* Add some spacing between buttons */
+    }
+
+    .results-section button div {
+        transform: translateY(0px);
+        width: 100%;
+    }
+
+    .results-section button,
+    .results-section button div {
+        transition: 0.6s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .results-section button div span {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        padding: 0.75em 1.125em;
+    }
+
+    .results-section button div:nth-child(1) {
+        background-color: #1e90ff;
+    }
+
+    .results-section button div:nth-child(2) {
+        background-color: #21dc62;
+    }
+
+    .results-section button:hover {
+        box-shadow: 0 0.625em 1em 0 rgba(33, 220, 98, 0.35);
+    }
+
+    .results-section button:hover div {
+        transform: translateY(-50px);
+    }
+
+    .results-section button p {
+        font-size: 17px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    .results-section button:active {
+        transform: scale(0.95);
+    }
+
+    /* Center the buttons */
+    .results-section {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    /* Remove any special effects from upload containers */
+    .upload-area {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important; /* Optional: add a simple border */
+    }
+</style>
 <div class="page-header">
 </div>
 
@@ -70,7 +146,7 @@
                     <button type="button" class="toggle-btn" data-target="text-entry">Enter Text</button>
                 </div>
             </div>
-            
+
             <!-- Text File Upload Area -->
             <div class="text-option active" id="text-upload">
                 <div class="upload-area" data-type="text">
@@ -84,7 +160,7 @@
                 </div>
                 <div class="file-info" id="text-info">No file selected</div>
             </div>
-            
+
             <!-- Text Entry Area -->
             <div class="text-option" id="text-entry">
                 <textarea id="user-text" name="user-text" placeholder="Enter your text here..."></textarea>
@@ -122,6 +198,39 @@
     <div class="results-content">
         <pre class="results-code">{{ results | tojson(indent=4) }}</pre>
     </div>
+</div>
+
+<!-- Buttons section -->
+<div class="results-section">
+    <button>
+        <div>
+            <span>
+                <p>Knowledge Graph</p>
+            </span>
+        </div>
+        <div>
+            <span>
+                <a href="/knowledge_graph">
+                    <p>Lets Go!</p>
+                </a>
+            </span>
+        </div>
+    </button>
+
+    <button>
+        <div>
+            <span>
+                <p>View Chat</p>
+            </span>
+        </div>
+        <div>
+            <span>
+                <a href="/chat">
+                    <p>View FIGHT</p>
+                </a>
+            </span>
+        </div>
+    </button>
 </div>
 {% endif %}
 {% endblock %}

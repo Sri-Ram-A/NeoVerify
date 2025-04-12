@@ -34,8 +34,6 @@ class ClaimFighter:
                 'claims':list[str] 
         '       questions':list[str]
         """
-        # print(f"{Fore.LIGHTGREEN_EX}THE MESSAGE ENTERED BY USER IS")
-        # print(message)
         chat_session = models.GeminiChat(api_key=self.gemini_key,system_prompt=GEMINI_EXTRACTOR_SYSTEM_PROMPT)
         response = chat_session.send_message(str(message))
         Style.RESET_ALL
@@ -44,7 +42,7 @@ class ClaimFighter:
         Style.RESET_ALL
         return response
 
-    def save_to_markdown(self, content, filename="claim_fighter_results.md", mode="a"):
+    def save_to_markdown(self, content, filename="/workspaces/fantom_code/backend/news_verification/static/claim_fighter_results.md", mode="a"):
         """
         Save content to a markdown file
         
@@ -78,7 +76,7 @@ class ClaimFighter:
                 markdown_content += f"#### Round {round_num}\n\n"
                 markdown_content += f"**DeepSeek Response:**\n\n```\n{deepseek_response}\n```\n\n"
 
-                if not deepseek_response or deepseek_response == "None":
+                if deepseek_response in [None,'None','', ' ']:
                     deepseek_response = "I don't know what to reply, my token limits have exceeded."
                 deepseek_response = f"Claim is: {claim}\nOpponent's response: {deepseek_response}"
 
@@ -120,7 +118,7 @@ class ClaimFighter:
                         self.output['claim'+str(idx)]['round'+str(round_num)]['tavily_response']=sources
                 markdown_content += f"---\n\n"
                 round_num += 1
-                break
+                
                 
         # Save the fight results to markdown
         self.save_to_markdown(markdown_content)
@@ -153,7 +151,6 @@ class ClaimFighter:
                 print(f"\nProcessed {key.upper()} input:\n{'-' * 40}\n{value}\n")
                 preprocessed_md += f"### {key.upper()} Content\n\n"
                 preprocessed_md += f"```\n{value}\n```\n\n"
-            
             preprocessed_md += "---\n\n"
             self.save_to_markdown(preprocessed_md)
             print("*"*50)
@@ -163,7 +160,6 @@ class ClaimFighter:
             claims_md = "## Extracted Claims\n\n"
             claims_md += f"```\n{claims}\n```\n\n"
             self.save_to_markdown(claims_md)
-            
             # Run the debate
             self.fight(claims)
             
