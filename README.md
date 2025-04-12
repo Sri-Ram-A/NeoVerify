@@ -1,7 +1,5 @@
 # NeoVerify - Advanced News Verification System
 
-![NeoVerify Logo](https://via.placeholder.com/350x100?text=NeoVerify+Logo)
-
 **NeoVerify** is a sophisticated news verification system that analyzes multimedia content and verifies claims through an AI-powered debate process. It helps users identify misinformation by pitting different AI models against each other in structured debates.
 
 ## 📋 Table of Contents
@@ -14,14 +12,11 @@
 - [System Architecture](#system-architecture)
 - [Demo](#demo)
 - [Contributing](#contributing)
-- [License](#license)
 - [Contact](#contact)
 
 ## 🔍 System Overview
 
 NeoVerify is designed to combat misinformation by extracting and verifying claims from various media types. The system utilizes multiple AI models (Llama, DeepSeek, and Gemini) to debate and fact-check claims, providing users with a comprehensive analysis of potentially misleading information.
-
-![System Workflow](https://via.placeholder.com/800x400?text=NeoVerify+Workflow)
 
 ## ✨ Features
 
@@ -144,7 +139,7 @@ The system consists of several key components:
 ### `Description` Class (preprocessor.py)
 Handles multi-modal content processing, extracting textual information from various media types.
 
-### `NeoVerify` Class (op.py)
+### `NeoVerify` Class (fighter.py)
 The main orchestrator that:
 - Initializes API connections
 - Processes user inputs
@@ -169,38 +164,27 @@ Provides a web interface for:
 ## 🎬 Demo
 
 ### Main Interface
-![Main Interface](https://via.placeholder.com/800x400?text=NeoVerify+Main+Interface)
+![Main Interface](backend/news_verification/static/images/heroSection.png)
 
 ### Upload Page
-![Upload Page](https://via.placeholder.com/800x400?text=NeoVerify+Upload+Page)
+![Upload Page](backend/news_verification/static/images/uploadSection.png)
 
 ### Knowledge Graph
-![Knowledge Graph](https://via.placeholder.com/800x400?text=NeoVerify+Knowledge+Graph)
+![Knowledge Graph](backend/news_verification/static/images/knowledgeGraphSection.png)
 
 ### Chat Interface
-![Chat Interface](https://via.placeholder.com/800x400?text=NeoVerify+Chat+Interface)
+![Chat Interface](backend/news_verification/static/images/chatSection.png)
 
 ## 🤝 Contributing
-
 Contributions are welcome! Please feel free to submit a Pull Request.
-
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 📞 Contact
-
-- **GitHub**: [Your GitHub Profile](https://github.com/yourusername)
-- **Twitter**: [@YourTwitterHandle](https://twitter.com/yourtwitterhandle)
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- **Email**: your.email@example.com
-
+- [SriRam.A](https://github.com/Sri-Ram-A) - *Project Lead*
+- [Sankalp Khamesra](https://github.com/itsthemahn) - *Backend Developer*
 ---
-
-Made with ❤️ by [Your Name]
