@@ -77,7 +77,7 @@ pip install -r requirements.txt
 GROQ_API_KEY=your_groq_api_key
 GEMINI_API_KEY=your_gemini_api_key
 TAVILY_API_KEY=your_tavily_api_key
-SERPAPI_KEY=your_serpapi_key
+SERP_API_KEY=your_serpapi_key
 ```
 
 5. Create necessary directories:

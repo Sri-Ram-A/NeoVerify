@@ -1,0 +1,4 @@
+**/__pycache__/
+**/uploads/
+venv/
+**/api.key

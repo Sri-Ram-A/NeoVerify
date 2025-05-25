@@ -1,10 +1,8 @@
 class Description:
-    def __init__(self):
-        self.TAVILY_API = "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"
-        self.GEMINI_API_KEY ='AIzaSyDG8RTYMMHQKuz0i2PDPmpaCVJBwkeFPZ4'
-        # "AIzaSyCS_W7p-BJrzYwU1_drQ1fZPVOQR7CAH6E"
-        #AIzaSyDG8RTYMMHQKuz0i2PDPmpaCVJBwkeFPZ4
-        self.API_KEY = "5ee4136c602d451fd46aa04f03948041f84f9d574bc84b1d03cd4cec9312d9c3"
+    def __init__(self,TAVILY_API_KEY,GEMINI_API_KEY,SERP_API_KEY):
+        self.TAVILY_API = TAVILY_API_KEY
+        self.GEMINI_API_KEY = GEMINI_API_KEY
+        self.SERP_API_KEY = SERP_API_KEY
 
     def _extract_image_description(self, image_path: str) -> str:
         from PIL import Image
@@ -69,7 +67,7 @@ class Description:
         from serpapi import GoogleSearch
 
         if api_key is None:
-            api_key = self.API_KEY
+            api_key = self.SERP_API_KEY
 
         params = {
             "api_key": api_key,
@@ -108,12 +106,9 @@ class Description:
         return info
     
     def process(self, input_dict):
-        print(input_dict)
         responses = {}
         for key, value in input_dict.items():
-            
             if value not in [None, 'null', 'None']:
-                print(f'{key}:{value}')
                 if key == "text":
                     responses[key] = value
 
@@ -136,23 +131,5 @@ class Description:
                     print("Successful URL description extracted")
                 else:
                     raise ValueError(f"Unsupported input type: {key}")
-                    if not responses:
-                        raise ValueError("All input values are None.")
-                print(responses)
         return responses 
 
-# if __name__ == "__main__":
-#     desc = Description()
-#     inputs = {
-#         "text": "This is a beautiful day at the beach. People are enjoying the sun, waves, and sand.",
-#         "image": r"/content/Mount_Rushmore_detail_view_(100MP) (1).jpg",
-#         "video": r"/content/vid1 (1).mp4",
-#         "audio": r"/content/harvard.wav",
-#         "url": None
-#     }
-#     try:
-#         results = desc.processor(inputs)
-#         for key, value in results.items():
-#             print(f"\nProcessed {key.upper()} input:\n{'-' * 40}\n{value}\n")
-#     except Exception as e:
-#         print(f"[ERROR] {e}")

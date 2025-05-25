@@ -2,7 +2,7 @@ from groq import Groq
 
 class DeepseekChat:
     def __init__(
-            self, api_key, model="deepseek-r1-distill-qwen-32b", 
+            self, api_key, model="deepseek-r1-distill-llama-70b", 
             temperature=0.6, max_tokens=4096, top_p=0.95, 
             system_prompt="Reply: No System prompt given"
             ):

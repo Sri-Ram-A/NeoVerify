@@ -50,7 +50,7 @@ def process_upload():
 def knowledge_graph():
     import json
     try:
-        with open("/workspaces/fantom_code/backend/news_verification/output.json", 'r', encoding='utf-8') as file:
+        with open("output.json", 'r', encoding='utf-8') as file:
             output = json.load(file)
     except Exception as e:
         print(f"Error: {str(e)}")
@@ -63,7 +63,7 @@ def knowledge_graph():
 def chat():
     import json
     try:
-        with open("/workspaces/fantom_code/backend/news_verification/output.json", 'r', encoding='utf-8') as file:
+        with open("output.json", 'r', encoding='utf-8') as file:
             output = json.load(file)
     except Exception as e:
         print(f"Error: {str(e)}")
