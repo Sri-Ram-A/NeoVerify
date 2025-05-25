@@ -185,6 +185,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 
 ## 📞 Contact
-- [SriRam.A](https://github.com/Sri-Ram-A) - *Project Lead*
-- [Sankalp Khamesra](https://github.com/itsthemahn) - *fantom_code_final/backend Developer*
+- [Shashank K](https://github.com/itsthemahn) - *Project Lead*
+- [SriRam.A](https://github.com/Sri-Ram-A) - *Project Integrator*
+- [Sankalp Khamesra](https://github.com/itsthemahn) - *backend, frontend Developer*
+- [Arshia Sirohi](https://github.com/arshia1901) - *backend devloper,tester*
+- [Arya Shetty](https://github.com/arya-shetty) - *backend Developer*
 ---
