@@ -58,7 +58,7 @@ NeoVerify is designed to combat misinformation by extracting and verifying claim
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/NeoVerify.git
-cd NeoVerify
+cd NeoVerify\backend\news_verification
 ```
 
 2. Create a virtual environment:
@@ -83,7 +83,6 @@ SERP_API_KEY=your_serpapi_key
 5. Create necessary directories:
 ```bash
 mkdir uploads
-mkdir static
 ```
 
 ## 💻 Usage
@@ -185,7 +184,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 
 ## 📞 Contact
-- [Shashank K](https://github.com/itsthemahn) - *Project Lead*
+- [Shashank K](https://github.com/00xshashank) - *Project Lead*
 - [SriRam.A](https://github.com/Sri-Ram-A) - *Project Integrator*
 - [Sankalp Khamesra](https://github.com/itsthemahn) - *backend, frontend Developer*
 - [Arshia Sirohi](https://github.com/arshia1901) - *backend devloper,tester*
